@@ -9,25 +9,38 @@ import Button from "@/components/Button";
 import * as S from "./style";
 
 const Navbar = () => {
-  return (
-    <S.NavContent>
-      <div className="container">
-        <Link to="#">
-          <img src={logoSite} alt="Logo do site" />
-        </Link>
+	return (
+		<S.NavContent>
+			<div className="container">
+				<div className="navMenu">
+					<Link to="#">
+						<img src={logoSite} alt="Logo do site" />
+					</Link>
 
-        <Button isTransparent isDisable>
-          <img src={userIcon} alt="" />
-          Entrar
-        </Button>
+					<S.UlItem>
+						<li>|</li>
+						<li>Novos</li>
+						<li>Usados</li>
+						<li>Vender</li>
+						<li>Comprar</li>
+						<li>Novidades e reviews</li>
+					</S.UlItem>
+				</div>
+				
+				<div className="alignMenu">
+					<Button isTransparent isDisable>
+						<img src={userIcon} alt="" />
+						Entrar
+					</Button>
 
-        <Button>
-          <img src={plusIcon} alt="" />
-          Vender
-        </Button>
-      </div>
-    </S.NavContent>
-  );
+					<Button>
+						<img src={plusIcon} alt="" />
+						Vender
+					</Button>
+				</div>
+			</div>
+		</S.NavContent>
+	);
 };
 
 export default Navbar;
