@@ -31,8 +31,10 @@ export const UlItem = styled.ul`
 		margin: 0 25px 0 0;
 		cursor: pointer;
 		&:nth-child(1) {
+			opacity: 0.15;
 			margin-right: 3rem;
 			margin-left: 5.8rem;
+			cursor: default;
 		}
 	}
 `
