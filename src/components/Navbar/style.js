@@ -1,6 +1,13 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const NavContent = styled.nav`
-  background-color: red;
   color: white;
-`
+  padding: 2rem 0;
+  margin-bottom: 7.2rem;
+
+  .container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+`;

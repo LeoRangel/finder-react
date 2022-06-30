@@ -55,6 +55,24 @@ const GlobalStyle = createGlobalStyle`
     background: var(--gray-900);
   }
 
+  h1, h2, h3, h4, h5, h6 {
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 2.8rem;
+  }
+
+  h3 {
+    font-size: 2.4rem;
+  }
+
   a {
     text-decoration: none;
   }
@@ -73,6 +91,13 @@ const GlobalStyle = createGlobalStyle`
     color: var(--white);
   }
 
+  section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 7.2rem;
+  }
+
   .container {
     display: flex;
     width: 100%;
@@ -81,11 +106,8 @@ const GlobalStyle = createGlobalStyle`
     padding: 0 1rem;
   }
 
-  .sectionTitle {
-    font-style: normal;
-    font-weight: 700;
-    font-size: 2.8rem;
-    line-height: 130%;
+  section .container {
+    flex-direction: column;
   }
 
   .visually-hidden {
