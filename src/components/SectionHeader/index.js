@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import arrowRight from "@/assets/icons/arrow-right.svg";
+import arrowRightIcon from "@/assets/icons/arrow-right.svg";
 
 import * as S from "./style";
 
@@ -20,7 +20,7 @@ const SectionHeader = ({
         {children}
         <Link to={actionLink}>
           {actionLabel}
-          <img src={arrowRight} alt="" />
+          <img src={arrowRightIcon} alt="" />
         </Link>
       </div>
     </S.SectionHeader>
