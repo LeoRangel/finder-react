@@ -1,12 +1,12 @@
-import React from 'react';
-import * as S from './style';
+import React from "react";
+import * as S from "./style";
 
 const Footer = () => {
   return (
     <S.FooterContent>
-      Footer
+      <div className="container">Footer</div>
     </S.FooterContent>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

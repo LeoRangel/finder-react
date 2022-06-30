@@ -1,18 +1,33 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
+import logoSite from "@/assets/img/logo-site.png";
+import plusIcon from "@/assets/icons/plus.svg";
+import userIcon from "@/assets/icons/user.svg";
 
-import * as S from './style';
+import * as S from "./style";
 
-import { menuItem } from '@/Constants';
+import Button from "../Button";
 
 const Navbar = () => {
-  return(
+  return (
     <S.NavContent>
-      { menuItem?.map((item, index) => (
-        <Link key={index} to={item.path}>{item.label}</Link>
-      ))}
+      <div className="container">
+        <Link to="#">
+          <img src={logoSite} alt="Logo do site" />
+        </Link>
+
+        <Button isTransparent isDisable>
+          <img src={userIcon} alt="" />
+          Entrar
+        </Button>
+
+        <Button>
+          <img src={plusIcon} alt="" />
+          Vender
+        </Button>
+      </div>
     </S.NavContent>
-  )
-}
+  );
+};
 
 export default Navbar;
