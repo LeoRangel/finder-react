@@ -1,9 +1,6 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
-  @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap");
-  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
-
   :root {
     /* Colors */
     --primary-color: #fd5631;
@@ -58,14 +55,6 @@ const GlobalStyle = createGlobalStyle`
     background: var(--gray-900);
   }
 
-  .container {
-    display: flex;
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 1rem;
-  }
-
   a {
     text-decoration: none;
   }
@@ -82,6 +71,14 @@ const GlobalStyle = createGlobalStyle`
     border: none;
     text-decoration: none;
     color: var(--white);
+  }
+
+  .container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 1rem;
   }
 
   .sectionTitle {
@@ -136,6 +133,6 @@ const GlobalStyle = createGlobalStyle`
       display: flex !important;
     }
   }
-`
+`;
 
 export default GlobalStyle;
