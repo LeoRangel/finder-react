@@ -2,8 +2,8 @@ import React from "react";
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import Button from "@/components/Button";
-import SectionHeader from "../../components/SectionHeader";
+import SectionExemplo from "../../components/SectionExemplo";
+import SectionOfertas from "../../components/SectionOfertas";
 
 const Home = () => {
   return (
@@ -13,32 +13,9 @@ const Home = () => {
       </header>
 
       <main>
-        <section>
-          <div className="container">
-            <SectionHeader
-              title="Section de exemplo"
-              actionLabel="Ver todos"
-              actionLink="#"
-              ariaLabel="Ir para página de ver todos os..."
-            >
-              <Button>Botão extra 1</Button>
-              <Button>Botão extra 2</Button>
-            </SectionHeader>
-            <div>Conteúdo da section...</div>
-          </div>
-        </section>
+        <SectionExemplo />
 
-        <section>
-          <div className="container">
-            <SectionHeader
-              title="Section de exemplo 2"
-              actionLabel="Ver todos"
-              actionLink="#"
-              ariaLabel="Ir para página de ver todos os..."
-            />
-            <div>Conteúdo da section...</div>
-          </div>
-        </section>
+        <SectionOfertas />
       </main>
 
       <Footer />
