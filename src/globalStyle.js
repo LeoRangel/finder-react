@@ -155,6 +155,127 @@ const GlobalStyle = createGlobalStyle`
       display: flex !important;
     }
   }
+
+  /* Form Fields */
+
+  label {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  fieldset {
+    width: auto;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    max-height: 200px;
+    overflow-y: auto;
+
+    legend {
+      margin-bottom: 1.2rem;
+      font-weight: 700;
+      font-size: 1.8rem;
+      line-height: 150%;
+    }
+
+    & > div > label {
+      margin-bottom: 0;
+      font-weight: inherit;
+      font-size: inherit;
+      line-height: inherit;
+    }
+
+    .doubleFields {
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+    .doubleFields > div {
+      width: 100%;
+    }
+    .doubleFields .separator {
+      width: 3rem;
+      margin: 0 0.8rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  input,
+  textarea,
+  select {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
+    color: white;
+
+    padding: 1.25rem 1.6rem;
+    text-decoration: none;
+    font-size: 1.6rem;
+    margin: 0;
+  }
+
+  input[type="radio"],
+  input[type="checkbox"] {
+    width: fit-content;
+  }
+
+  input[type="checkbox"]:not(:checked) {
+    all: unset;
+    width: 9.82px;
+    height: 9.82px;
+    padding: 0;
+    background-color: transparent;
+    border: 1.1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 2px !important;
+  }
+
+  input[type="checkbox"] {
+    accent-color: var(--primary-color);
+  }
+
+  select {
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    background-position: calc(100% - 1.2rem) center !important;
+    background: rgba(255, 255, 255, 0.04) url("../img/icons/chevron-down.svg")
+      no-repeat;
+    padding-right: 3rem;
+
+    option {
+      color: initial;
+    }
+
+    &::-ms-expand {
+      /* To remove the arrow of select element in IE */
+      display: none;
+    }
+  }
+
+  input, textarea, select {
+    &:focus {
+      outline: none !important;
+      border: 1px solid var(--primary-color) !important;
+      box-shadow: var(--box-shadow-dafault);
+    }
+    &:disabled {
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  input, textarea {
+    &:-moz-placeholder {
+      color: rgba(255, 255, 255, 0.5);
+    }
+    &::-webkit-input-placeholder {
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
 `;
 
 export default GlobalStyle;
