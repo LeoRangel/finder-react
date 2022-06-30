@@ -2,8 +2,8 @@ import React from "react";
 
 import * as S from "./style";
 
-import SectionHeader from "../../components/SectionHeader";
-import CarCard from "../../components/CarCard";
+import SectionHeader from "@/components/SectionHeader";
+import CarCard from "@/components/CarCard";
 
 const SectionOfertas = ({}) => {
   return (
@@ -11,8 +11,8 @@ const SectionOfertas = ({}) => {
       <div className="container">
         <SectionHeader
           title="Ofertas"
-          actionLabel="Ver todas"
-          actionLink="#"
+          actionLabel="Ver todas as ofertas"
+          actionLink="/catalog"
           ariaLabel="Ir para página de ver todos as ofertas"
         />
 
