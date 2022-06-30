@@ -24,6 +24,7 @@ export const SectionHeader = styled.header`
     display: flex;
     margin-top: auto;
     gap: 1.2rem;
+    flex-wrap: wrap;
   }
 
   @media (max-width: 768px) {
