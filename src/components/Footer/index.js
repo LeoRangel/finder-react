@@ -1,9 +1,8 @@
 import React from "react";
 import * as S from "./style";
 
-import facebookIcon from "@/assets/icons/facebook.svg";
-
 import IconButton from "@/components/IconButton";
+import SubscribeEmail from "@/components/SubscribeEmail";
 
 const Footer = () => {
   return (
@@ -57,6 +56,12 @@ const Footer = () => {
             </svg>
           </IconButton>
         </div>
+
+        <form id="subscribeForm">
+          <fieldset>
+            <SubscribeEmail />
+          </fieldset>
+        </form>
       </div>
     </S.FooterContent>
   );

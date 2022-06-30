@@ -2,7 +2,7 @@ import React from "react";
 
 import * as S from "./style";
 
-import SectionHeader from "../../components/SectionHeader";
+import SectionHeader from "@/components/SectionHeader";
 import Button from "@/components/Button";
 
 const SectionExemplo = ({}) => {
