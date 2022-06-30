@@ -4,9 +4,9 @@ import logoSite from "@/assets/img/logo-site.png";
 import plusIcon from "@/assets/icons/plus.svg";
 import userIcon from "@/assets/icons/user.svg";
 
-import * as S from "./style";
+import Button from "@/components/Button";
 
-import Button from "../Button";
+import * as S from "./style";
 
 const Navbar = () => {
   return (
