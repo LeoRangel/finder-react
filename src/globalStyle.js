@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import chevronDownIcon from "@/assets/icons/chevron-down.svg";
 
 const GlobalStyle = createGlobalStyle`
   :root {
@@ -243,7 +244,7 @@ const GlobalStyle = createGlobalStyle`
     -moz-appearance: none;
     -ms-appearance: none;
     background-position: calc(100% - 1.2rem) center !important;
-    background: rgba(255, 255, 255, 0.04) url("../img/icons/chevron-down.svg")
+    background: rgba(255, 255, 255, 0.04) url(${chevronDownIcon})
       no-repeat;
     padding-right: 3rem;
 

@@ -13,6 +13,13 @@ export const RadioBtnsGroup = styled.fieldset`
   input[type="radio"]:checked + label {
     color: var(--primary-color);
     background: white;
+
+    svg,
+    path,
+    i {
+      color: var(--primary-color);
+      fill: var(--primary-color);
+    }
   }
 
   &.iconBtn input[type="radio"]:checked + label {
