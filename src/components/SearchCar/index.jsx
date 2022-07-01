@@ -27,6 +27,7 @@ const SearchCar = () => {
 						id="searchNovo"
 						name="condition"
 						checked
+						onChange={() => {}}
 					/>
 					<label for="searchNovo">Novo</label>
 				</div>
@@ -35,51 +36,52 @@ const SearchCar = () => {
 						type="radio"
 						id="searchUsado"
 						name="condition"
+						onChange={() => {}}
 					/>
 					<label for="searchUsado">Usado</label>
 				</div>
 			</RadioBtnsGroup>
 
 				<div id="formSearchCar">
-					<label for="searchInput" class="labelFormat">
-						<i class="bi bi-search"></i>
+					<label for="searchInput" className="labelFormat">
+						<i className="bi bi-search"></i>
 						<input type="text" id="searchInput" placeholder="Pesquise por..."/>
 					</label>
 
-					<span class="searchSeparator"></span>
+					<span className="searchSeparator"></span>
 
-					<label for="searchMarca" class="labelFormat">
-						<i class="bi bi-star"></i>
-						<select name="searchMarca" id="searchMarca" class="selectHeader">
+					<label for="searchMarca" className="labelFormat">
+						<i className="bi bi-star"></i>
+						<select name="searchMarca" id="searchMarca" className="selectHeader">
 							<option value="">Marca</option>
 						</select>
 					</label>
 
-					<span class="searchSeparator"></span>
+					<span className="searchSeparator"></span>
 
-					<label for="searchModelo" class="labelFormat">
-						<i class="bi bi-view-stacked"></i>
-						<select name="searchModelo" id="searchModelo" class="selectHeader">
+					<label for="searchModelo" className="labelFormat">
+						<i className="bi bi-view-stacked"></i>
+						<select name="searchModelo" id="searchModelo" className="selectHeader">
 							<option value="">Modelo</option>
 							<option value="Jetta">Jetta</option>
 						</select>
 					</label>
 
-					<span class="searchSeparator"></span>
+					<span className="searchSeparator"></span>
 
-					<label for="searchTipo" class="labelFormat">
-						<i class="fa fa-car-side"></i>
-						<select name="searchTipo" id="searchTipo" class="selectHeader">
+					<label for="searchTipo" className="labelFormat">
+						<i className="fa fa-car-side"></i>
+						<select name="searchTipo" id="searchTipo" className="selectHeader">
 							<option value="">Tipo</option>
 							<option value="Sedan">Sedan</option>
 						</select>
 					</label>
 
-					<span class="searchSeparator"></span>
+					<span className="searchSeparator"></span>
 
-					<label for="searchLocal" class="labelFormat">
-						<i class="bi bi-geo-alt"></i>
-						<select name="searchLocal" id="searchLocal" class="selectHeader">
+					<label for="searchLocal" className="labelFormat">
+						<i className="bi bi-geo-alt"></i>
+						<select name="searchLocal" id="searchLocal" className="selectHeader">
 							<option value="">Estado</option>
 							<option value="Sedan">RJ</option>
 						</select>

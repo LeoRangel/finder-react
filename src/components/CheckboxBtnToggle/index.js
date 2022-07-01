@@ -5,9 +5,9 @@ import * as S from "./style";
 const CheckboxBtnToggle = ({ children, ...props }) => {
   return (
     <S.CheckboxBtnToggle {...props}>
-      <div class="checkboxBtnToggle">
+      <div className="checkboxBtnToggle">
         <input type="checkbox" />
-        <span class="slider round"></span>
+        <span className="slider round"></span>
       </div>
       {children}
     </S.CheckboxBtnToggle>

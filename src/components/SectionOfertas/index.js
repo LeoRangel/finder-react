@@ -16,7 +16,7 @@ const SectionOfertas = ({}) => {
           ariaLabel="Ir para página de ver todos as ofertas"
         />
 
-        <div class="ofertasCarGrid">
+        <div className="ofertasCarGrid">
           <CarCard
             link="#"
             year="2014"
