@@ -9,15 +9,16 @@ import mileageIcon from "@/assets/icons/mileage.svg";
 import transmissionIcon from "@/assets/icons/transmission.svg";
 import fuelIcon from "@/assets/icons/fuel.svg";
 
-import imgDefault from "@/assets/img/default.png";
-
 import IconButton from "@/components/IconButton";
 
 import * as S from "./style";
 
 const CarCard = ({
   direction = "vertical",
+  id,
+  images,
   link = "#",
+  condition,
   year,
   name,
   price,
@@ -26,23 +27,64 @@ const CarCard = ({
   transmission,
   fuel,
 }) => {
+  function prevCardSlide(id) {
+    showCardSlides(-1, id);
+  }
+
+  function nextCardSlide(id) {
+    showCardSlides(1, id);
+  }
+
+  function showCardSlides(num, id) {
+    let sliderCount = document.getElementById(id).childElementCount;
+    let currentSlide = document.querySelector(`#${id} .mySlide.active`);
+    var slideIndex = parseInt(currentSlide.dataset.slideIndex);
+
+    slideIndex += num;
+
+    // Slider loop
+    if (slideIndex > sliderCount) {
+      slideIndex = 1;
+    }
+    if (slideIndex < 1) {
+      slideIndex = sliderCount;
+    }
+
+    currentSlide.classList.toggle("active");
+
+    let newSlide = document.querySelectorAll(
+      `#${id} .mySlide[data-slide-index~="${slideIndex}"]`
+    )[0];
+    newSlide.classList.toggle("active");
+  }
+
   return (
     <S.CarCard direction={direction}>
       <S.CardThumbnail direction={direction}>
         <div className="carCardSlider">
-          <div className="mySlideList" id="car2">
-            <a href="#" className="mySlide active" data-slide-index="1">
-              <img src={imgDefault} alt="Imagem Carro" loading="lazy" />
-            </a>
-            <a href="#" className="mySlide" data-slide-index="2">
-              <img src={imgDefault} alt="Imagem Carro" loading="lazy" />
-            </a>
+          <div className="mySlideList" id={`car${id}`}>
+            {images?.map((item, index) => (
+              <a
+                href={link}
+                className={`mySlide ${index === 0 && "active"}`}
+                data-slide-index={index + 1}
+                key={index}
+              >
+                <img src={item} alt="" loading="lazy" />
+              </a>
+            ))}
           </div>
 
-          <IconButton className="prevCardSlide" onclick="prevCardSlide('car2')">
+          <IconButton
+            className="prevCardSlide"
+            onClick={() => prevCardSlide(`car${id}`)}
+          >
             <img src={chevronLeftIcon} alt="" />
           </IconButton>
-          <IconButton className="nextCardSlide" onclick="nextCardSlide('car2')">
+          <IconButton
+            className="nextCardSlide"
+            onClick={() => nextCardSlide(`car${id}`)}
+          >
             <img src={chevronRightIcon} alt="" />
           </IconButton>
         </div>
@@ -52,8 +94,11 @@ const CarCard = ({
         </IconButton>
 
         <div className="carCardBadges">
-          <S.CarBadge className="badgeNew">Novo</S.CarBadge>
-          <S.CarBadge className="badgeUsed">Usado</S.CarBadge>
+          {condition === "Novo" ? (
+            <S.CarBadge className="badgeNew">Novo</S.CarBadge>
+          ) : (
+            <S.CarBadge className="badgeUsed">Usado</S.CarBadge>
+          )}
         </div>
       </S.CardThumbnail>
 
@@ -65,7 +110,7 @@ const CarCard = ({
                 <small>{year}</small>
               </div>
 
-              <label className="carCompare">
+              <label>
                 <input type="checkbox" name="carCompare" value="compare" />
                 <small>Compare</small>
               </label>
@@ -112,7 +157,7 @@ const CarCard = ({
                 <small>{year}</small>
               </div>
 
-              <label className="carCompare">
+              <label>
                 <input type="checkbox" name="carCompare" value="compare" />
                 <small>Compare</small>
               </label>
