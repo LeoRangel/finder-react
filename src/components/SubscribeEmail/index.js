@@ -10,7 +10,7 @@ import * as S from "./style";
 const SubscribeEmail = ({ ...props }) => {
   return (
     <S.SubscribeEmail {...props}>
-      <label for="formCheckEmail">
+      <label htmlFor="formCheckEmail">
         <img src={mailIcon} alt="" />
 
         <input
@@ -18,6 +18,7 @@ const SubscribeEmail = ({ ...props }) => {
           name="formCheckEmail"
           id="formCheckEmail"
           value=""
+          onChange={() => {}}
           placeholder="email"
         />
 

@@ -165,31 +165,6 @@ export const CardBody = styled.div`
     font-weight: 400;
     font-size: 1.4rem;
     line-height: 150%;
-
-    .carCompare {
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-
-      input {
-        width: 1.2rem;
-        height: 1.2rem;
-      }
-
-      input[type="checkbox"]:not(:checked) {
-        all: unset;
-        width: 0.982rem;
-        height: 0.982rem;
-        padding: 0;
-        background-color: transparent;
-        border: 0.11rem solid rgba(255, 255, 255, 0.5);
-        border-radius: 0.2rem !important;
-      }
-
-      input[type="checkbox"] {
-        accent-color: var(--primary-color);
-      }
-    }
   }
 
   .carName {

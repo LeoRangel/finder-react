@@ -22,16 +22,18 @@ const SectionLatestPublished = ({}) => {
                 id="formConditionNovo"
                 name="formCondition"
                 checked
+                onChange={() => {}}
               />
-              <label for="formConditionNovo">Novo</label>
+              <label htmlFor="formConditionNovo">Novo</label>
             </div>
             <div>
               <input
                 type="radio"
                 id="formConditionUsado"
                 name="formCondition"
+                onChange={() => {}}
               />
-              <label for="formConditionUsado">Usado</label>
+              <label htmlFor="formConditionUsado">Usado</label>
             </div>
           </RadioBtnsGroup>
         </SectionHeader>
