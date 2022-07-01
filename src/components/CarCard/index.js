@@ -65,7 +65,7 @@ const CarCard = ({
           <div className="mySlideList" id={`car${id}`}>
             {images?.map((item, index) => (
               <a
-                href={link}
+                href={`/car/?car_id=${id}`}
                 className={`mySlide ${index === 0 && "active"}`}
                 data-slide-index={index + 1}
                 key={index}
