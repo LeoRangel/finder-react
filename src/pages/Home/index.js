@@ -7,6 +7,7 @@ import SectionLatestPublished from "@/components/SectionLatestPublished";
 import MainHeader from "../../components/MainHeader";
 import SearchCar from "../../components/SearchCar";
 import Brands from "../../components/Brands";
+import SectionTemosDiferente from "../../components/SectionTemosDiferente"
 
 const Home = () => {
   return (
@@ -21,6 +22,7 @@ const Home = () => {
         <SectionOfertas />
 
 		<Brands/>
+    <SectionTemosDiferente />
 
         <SectionLatestPublished />
       </main>
