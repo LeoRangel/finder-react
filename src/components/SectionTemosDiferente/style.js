@@ -43,4 +43,24 @@ export const SectionTemosDiferente = styled.section`
 }
 
 
+@media(max-width: 768px) {
+
+    .containerCar{
+        display: none;
+    }
+    
+    .sectionAll{
+        flex-wrap: wrap;
+    }
+    
+    .infoCard{
+        flex-direction:  row-reverse;
+    }
+    
+    .containerCardAll{
+        margin-bottom: 3.4rem;
+    }
+    }
+
+
 `;
