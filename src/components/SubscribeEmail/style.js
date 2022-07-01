@@ -33,6 +33,7 @@ export const SubscribeEmail = styled.div`
   }
 
   .subscribeButton {
+    height: 100%;
     padding: 0.6rem;
     background: rgba(255, 255, 255, 0.04);
     border: 1px solid rgba(255, 255, 255, 0.12);
