@@ -17,9 +17,8 @@ const SubscribeEmail = ({ ...props }) => {
           type="email"
           name="formCheckEmail"
           id="formCheckEmail"
-          value=""
           onChange={() => {}}
-          placeholder="email"
+          placeholder="E-mail"
         />
 
         <div className="subscribeButton">

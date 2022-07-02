@@ -21,6 +21,12 @@ export const IconButton = styled.button`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+
+  img,
+  svg,
+  path,
+  i {
     color: ${(props) => (props.isWhite ? "var(--primary-color)" : "#fff")};
     fill: ${(props) => (props.isWhite ? "var(--primary-color)" : "#fff")};
   }

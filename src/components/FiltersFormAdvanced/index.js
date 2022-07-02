@@ -37,10 +37,10 @@ const FiltersFormAdvanced = ({ ...props }) => {
       <fieldset>
         <legend>Localização</legend>
 
-        <label for="formLocale" class="visually-hidden">
+        <label htmlFor="formLocale" className="visually-hidden">
           Localização
         </label>
-        <select name="formLocale" id="formLocale">
+        <select name="formLocale" id="formLocale" onChange={() => {}}>
           <option value="">Escolha o local</option>
         </select>
       </fieldset>
@@ -49,12 +49,13 @@ const FiltersFormAdvanced = ({ ...props }) => {
         <legend>Tipo</legend>
 
         <div id="formType">
-          <label for="formTypeSedan">
+          <label htmlFor="formTypeSedan">
             <input
               type="checkbox"
               name="formType"
               id="formTypeSedan"
               value="formTypeSedan"
+              onChange={() => {}}
             />
             Sedan
           </label>
@@ -65,19 +66,19 @@ const FiltersFormAdvanced = ({ ...props }) => {
         <legend>Marca e modelo</legend>
 
         <div>
-          <label for="formBrand" class="visually-hidden">
+          <label htmlFor="formBrand" className="visually-hidden">
             Marca
           </label>
-          <select name="formBrand" id="formBrand">
+          <select name="formBrand" id="formBrand" onChange={() => {}}>
             <option value="">Marca</option>
           </select>
         </div>
 
         <div>
-          <label for="formModel" class="visually-hidden">
+          <label htmlFor="formModel" className="visually-hidden">
             Modelo
           </label>
-          <select name="formModel" id="formModel" disabled>
+          <select name="formModel" id="formModel" disabled onChange={() => {}}>
             <option value="">Modelo</option>
           </select>
         </div>
@@ -86,23 +87,23 @@ const FiltersFormAdvanced = ({ ...props }) => {
       <fieldset>
         <legend>Ano (Min - Max)</legend>
 
-        <div class="doubleFields">
+        <div className="doubleFields">
           <div>
-            <label for="formYearMin" class="visually-hidden">
+            <label htmlFor="formYearMin" className="visually-hidden">
               Ano Min
             </label>
-            <select name="formYearMin" id="formYearMin">
+            <select name="formYearMin" id="formYearMin" onChange={() => {}}>
               <option value="">Todos</option>
             </select>
           </div>
 
-          <span class="separator"></span>
+          <span className="separator"></span>
 
           <div>
-            <label for="formYearMax" class="visually-hidden">
+            <label htmlFor="formYearMax" className="visually-hidden">
               Ano Max
             </label>
-            <select name="formYearMax" id="formYearMax">
+            <select name="formYearMax" id="formYearMax" onChange={() => {}}>
               <option value="">Todos</option>
             </select>
           </div>
@@ -112,9 +113,9 @@ const FiltersFormAdvanced = ({ ...props }) => {
       <fieldset>
         <legend>Preço (Min - Max)</legend>
 
-        <div class="doubleFields">
+        <div className="doubleFields">
           <div>
-            <label for="inputPreçoMin" class="visually-hidden">
+            <label htmlFor="inputPreçoMin" className="visually-hidden">
               Preço Min
             </label>
             <input
@@ -124,13 +125,14 @@ const FiltersFormAdvanced = ({ ...props }) => {
               placeholder="Ex.: 10000"
               min="0"
               value=""
+              onChange={() => {}}
             />
           </div>
 
-          <span class="separator"></span>
+          <span className="separator"></span>
 
           <div>
-            <label for="inputPreçoMax" class="visually-hidden">
+            <label htmlFor="inputPreçoMax" className="visually-hidden">
               Preço Max
             </label>
             <input
@@ -140,6 +142,7 @@ const FiltersFormAdvanced = ({ ...props }) => {
               placeholder="Ex.: 50000"
               min="0"
               value=""
+              onChange={() => {}}
             />
           </div>
         </div>
@@ -154,12 +157,13 @@ const FiltersFormAdvanced = ({ ...props }) => {
         <legend>Combustível</legend>
 
         <div id="formFuel">
-          <label for="formFuelDiesel">
+          <label htmlFor="formFuelDiesel">
             <input
               type="checkbox"
               name="formFuel"
               id="formFuelDiesel"
               value="formDiesel"
+              onChange={() => {}}
             />
             Diesel
           </label>
@@ -170,12 +174,13 @@ const FiltersFormAdvanced = ({ ...props }) => {
         <legend>Transmissão</legend>
 
         <div id="formTransmission">
-          <label for="formTransmissionAutomatic">
+          <label htmlFor="formTransmissionAutomatic">
             <input
               type="checkbox"
               name="formTransmission"
               id="formTransmissionAutomatic"
               value="formTransmissionAutomatic"
+              onChange={() => {}}
             />
             Automatic
           </label>
@@ -185,10 +190,10 @@ const FiltersFormAdvanced = ({ ...props }) => {
       <fieldset>
         <legend>Quilometragem</legend>
 
-        <label for="formMileage" class="visually-hidden">
+        <label htmlFor="formMileage" className="visually-hidden">
           Quilometragem
         </label>
-        <select name="formMileage" id="formMileage">
+        <select name="formMileage" id="formMileage" onChange={() => {}}>
           <option value="">Todas</option>
         </select>
       </fieldset>
@@ -197,12 +202,13 @@ const FiltersFormAdvanced = ({ ...props }) => {
         <legend>Cor</legend>
 
         <div id="formColor">
-          <label for="formColorPreto">
+          <label htmlFor="formColorPreto">
             <input
               type="checkbox"
               name="formColor"
               id="formColorPreto"
               value="formPreto"
+              onChange={() => {}}
             />
             Preto
           </label>
@@ -213,12 +219,13 @@ const FiltersFormAdvanced = ({ ...props }) => {
         <legend>Adicional</legend>
 
         <div id="formAdditional">
-          <label for="formAdditionalTetoSolar">
+          <label htmlFor="formAdditionalTetoSolar">
             <input
               type="checkbox"
               name="formAdditional"
               id="formAdditionalTetoSolar"
               value="formAdditionalTetoSolar"
+              onChange={() => {}}
             />
             Teto solar
           </label>

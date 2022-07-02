@@ -54,6 +54,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     color: var(--white);
     background: var(--gray-900);
+    overflow-x: hidden;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -102,9 +103,9 @@ const GlobalStyle = createGlobalStyle`
   .container {
     display: flex;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1300px;
     margin: auto;
-    padding: 0 1rem;
+    padding: 0 1.6rem;
   }
 
   section .container {
