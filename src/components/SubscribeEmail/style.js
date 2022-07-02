@@ -47,6 +47,7 @@ export const SubscribeEmail = styled.div`
   a {
     width: max-content;
     font-size: 1.6rem;
-    padding: 1rem 2rem;
+    /* padding: 1rem 2rem; */
+    padding: 1.5rem;
   }
 `;

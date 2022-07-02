@@ -19,7 +19,7 @@ const SearchCar = () => {
 	return (
 		<div className="container">
 			<S.SearchCar>
-				
+
 			<RadioBtnsGroup>
 				<div>
 					<input
@@ -29,7 +29,7 @@ const SearchCar = () => {
 						checked
 						onChange={() => {}}
 					/>
-					<label for="searchNovo">Novo</label>
+					<label htmlFor="searchNovo">Novo</label>
 				</div>
 				<div>
 					<input
@@ -38,30 +38,30 @@ const SearchCar = () => {
 						name="condition"
 						onChange={() => {}}
 					/>
-					<label for="searchUsado">Usado</label>
+					<label htmlFor="searchUsado">Usado</label>
 				</div>
 			</RadioBtnsGroup>
 
 				<div id="formSearchCar">
-					<label for="searchInput" className="labelFormat">
+					<label htmlFor="searchInput" className="labelFormat">
 						<i className="bi bi-search"></i>
 						<input type="text" id="searchInput" placeholder="Pesquise por..."/>
 					</label>
 
 					<span className="searchSeparator"></span>
 
-					<label for="searchMarca" className="labelFormat">
+					<label htmlFor="searchMarca" className="labelFormat">
 						<i className="bi bi-star"></i>
-						<select name="searchMarca" id="searchMarca" className="selectHeader">
+						<select name="searchMarca" id="searchMarca" className="selectHeader" onChange={() => {}}>
 							<option value="">Marca</option>
 						</select>
 					</label>
 
 					<span className="searchSeparator"></span>
 
-					<label for="searchModelo" className="labelFormat">
+					<label htmlFor="searchModelo" className="labelFormat">
 						<i className="bi bi-view-stacked"></i>
-						<select name="searchModelo" id="searchModelo" className="selectHeader">
+						<select name="searchModelo" id="searchModelo" className="selectHeader" onChange={() => {}}>
 							<option value="">Modelo</option>
 							<option value="Jetta">Jetta</option>
 						</select>
@@ -69,9 +69,9 @@ const SearchCar = () => {
 
 					<span className="searchSeparator"></span>
 
-					<label for="searchTipo" className="labelFormat">
+					<label htmlFor="searchTipo" className="labelFormat">
 						<i className="fa fa-car-side"></i>
-						<select name="searchTipo" id="searchTipo" className="selectHeader">
+						<select name="searchTipo" id="searchTipo" className="selectHeader" onChange={() => {}}>
 							<option value="">Tipo</option>
 							<option value="Sedan">Sedan</option>
 						</select>
@@ -79,9 +79,9 @@ const SearchCar = () => {
 
 					<span className="searchSeparator"></span>
 
-					<label for="searchLocal" className="labelFormat">
+					<label htmlFor="searchLocal" className="labelFormat">
 						<i className="bi bi-geo-alt"></i>
-						<select name="searchLocal" id="searchLocal" className="selectHeader">
+						<select name="searchLocal" id="searchLocal" className="selectHeader" onChange={() => {}}>
 							<option value="">Estado</option>
 							<option value="Sedan">RJ</option>
 						</select>

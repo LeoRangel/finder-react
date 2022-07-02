@@ -6,6 +6,7 @@ import switchHorizontalIcon from "@/assets/icons/switch-horizontal.svg";
 import chevronLeftIcon from "@/assets/icons/chevron-left.svg";
 import chevronRightIcon from "@/assets/icons/chevron-right.svg";
 import alignLeftIcon from "@/assets/icons/align-left.svg";
+import carIcon from "@/assets/icons/car.svg";
 
 import RadioBtnsGroup from "@/components/RadioBtnsGroup";
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -14,7 +15,7 @@ import CarCard from "@/components/CarCard";
 const SectionFilteredCars = ({}) => {
   return (
     <S.SectionFilteredCars id="filteredCars">
-      <div class="filteredCarsHeader">
+      <div className="filteredCarsHeader">
         <div>
           <Breadcrumbs>
             <li>
@@ -31,24 +32,24 @@ const SectionFilteredCars = ({}) => {
         <div>
           <h1 id="catalogTitle">Carros</h1>
 
-          <div class="option">
-            <img src="./img/icons/car.svg" alt="" />
+          <div className="option">
+            <img src={carIcon} alt="" />
             <span id="qtdOffers">0 oferta(s)</span>
           </div>
         </div>
 
-        <div class="filteredCarsOptions">
+        <div className="filteredCarsOptions">
           <fieldset>
-            <label for="formSortBy">
+            <label htmlFor="formSortBy">
               <img src={alignLeftIcon} alt="" />
               Ordenar por:
             </label>
-            <select name="formSortBy" id="formSortBy">
+            <select name="formSortBy" id="formSortBy" onChange={() => {}}>
               <option value="maisnovo">Mais novo</option>
               <option value="maisantigo">Mais antigo</option>
             </select>
 
-            <div class="btnCompare">
+            <div className="btnCompare">
               <button>
                 <img src={switchHorizontalIcon} alt="" />
                 Comparar (0)
@@ -58,8 +59,14 @@ const SectionFilteredCars = ({}) => {
 
           <RadioBtnsGroup isIconBtn>
             <div>
-              <input type="radio" id="formShowList" name="formStatus" checked />
-              <label for="formShowList">
+              <input
+                type="radio"
+                id="formShowList"
+                name="formStatus"
+                checked
+                onChange={() => {}}
+              />
+              <label htmlFor="formShowList">
                 <svg
                   width="16"
                   height="16"
@@ -68,14 +75,14 @@ const SectionFilteredCars = ({}) => {
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
                     d="M3.00024 2.16691C2.54001 2.16691 2.16691 2.54001 2.16691 3.00024V4.66691C2.16691 5.12715 2.54001 5.50024 3.00024 5.50024H13.0002C13.4605 5.50024 13.8336 5.12715 13.8336 4.66691V3.00024C13.8336 2.54001 13.4605 2.16691 13.0002 2.16691H3.00024ZM0.500244 3.00024C0.500244 1.61953 1.61953 0.500244 3.00024 0.500244H13.0002C14.381 0.500244 15.5002 1.61953 15.5002 3.00024V4.66691C15.5002 6.04762 14.381 7.16691 13.0002 7.16691H3.00024C1.61953 7.16691 0.500244 6.04762 0.500244 4.66691V3.00024Z"
                     fill="white"
                   />
                   <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
                     d="M3.00024 10.5C2.54001 10.5 2.16691 10.8731 2.16691 11.3333V13C2.16691 13.4602 2.54001 13.8333 3.00024 13.8333H13.0002C13.4605 13.8333 13.8336 13.4602 13.8336 13V11.3333C13.8336 10.8731 13.4605 10.5 13.0002 10.5H3.00024ZM0.500244 11.3333C0.500244 9.95262 1.61953 8.83333 3.00024 8.83333H13.0002C14.381 8.83333 15.5002 9.95262 15.5002 11.3333V13C15.5002 14.3807 14.381 15.5 13.0002 15.5H3.00024C1.61953 15.5 0.500244 14.3807 0.500244 13V11.3333Z"
                     fill="white"
                   />
@@ -84,7 +91,7 @@ const SectionFilteredCars = ({}) => {
             </div>
             <div>
               <input type="radio" id="formShowGrid" name="formStatus" />
-              <label for="formShowGrid">
+              <label htmlFor="formShowGrid">
                 <svg
                   width="16"
                   height="16"
@@ -93,26 +100,26 @@ const SectionFilteredCars = ({}) => {
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
                     d="M0.5 2.16667C0.5 1.24619 1.24619 0.5 2.16667 0.5H5.5C6.42047 0.5 7.16667 1.24619 7.16667 2.16667V5.5C7.16667 6.42047 6.42047 7.16667 5.5 7.16667H2.16667C1.24619 7.16667 0.5 6.42047 0.5 5.5V2.16667ZM5.5 2.16667H2.16667V5.5H5.5V2.16667Z"
                     fill="white"
                   />
                   <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
                     d="M8.83333 2.16667C8.83333 1.24619 9.57953 0.5 10.5 0.5H13.8333C14.7538 0.5 15.5 1.24619 15.5 2.16667V5.5C15.5 6.42047 14.7538 7.16667 13.8333 7.16667H10.5C9.57953 7.16667 8.83333 6.42047 8.83333 5.5V2.16667ZM13.8333 2.16667H10.5V5.5H13.8333V2.16667Z"
                     fill="white"
                   />
                   <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
                     d="M0.5 10.5C0.5 9.57951 1.24619 8.83332 2.16667 8.83332H5.5C6.42047 8.83332 7.16667 9.57951 7.16667 10.5V13.8333C7.16667 14.7538 6.42047 15.5 5.5 15.5H2.16667C1.24619 15.5 0.5 14.7538 0.5 13.8333V10.5ZM5.5 10.5H2.16667V13.8333H5.5V10.5Z"
                     fill="white"
                   />
                   <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
                     d="M8.83333 10.5C8.83333 9.57951 9.57953 8.83332 10.5 8.83332H13.8333C14.7538 8.83332 15.5 9.57951 15.5 10.5V13.8333C15.5 14.7538 14.7538 15.5 13.8333 15.5H10.5C9.57953 15.5 8.83333 14.7538 8.83333 13.8333V10.5ZM13.8333 10.5H10.5V13.8333H13.8333V10.5Z"
                     fill="white"
                   />
@@ -123,7 +130,7 @@ const SectionFilteredCars = ({}) => {
         </div>
       </div>
 
-      <div class="filteredCarsGrid">
+      <div className="filteredCarsGrid">
         <CarCard
           id="0"
           images={[
@@ -158,19 +165,19 @@ const SectionFilteredCars = ({}) => {
         />
       </div>
 
-      <div class="filteredCarsFooter">
-        <div class="filteredCarsOptions">
+      <div className="filteredCarsFooter">
+        <div className="filteredCarsOptions">
           <fieldset>
-            <label for="formSortBy">
+            <label htmlFor="formSortBy">
               <img src={alignLeftIcon} alt="" />
               Ordenar por:
             </label>
-            <select name="formSortBy" id="formSortBy">
+            <select name="formSortBy" id="formSortBy" onChange={() => {}}>
               <option value="maisnovo">Mais novo</option>
               <option value="maisantigo">Mais antigo</option>
             </select>
 
-            <div class="btnCompare">
+            <div className="btnCompare">
               <button>
                 <img src={switchHorizontalIcon} alt="" />
                 Comparar (0)
@@ -178,14 +185,14 @@ const SectionFilteredCars = ({}) => {
             </div>
           </fieldset>
 
-          <ul class="pagination">
+          <ul className="pagination">
             <li>
               <button>
                 <img src={chevronLeftIcon} alt="" />
               </button>
             </li>
             <li>
-              <button class="active">
+              <button className="active">
                 <span>1</span>
               </button>
             </li>

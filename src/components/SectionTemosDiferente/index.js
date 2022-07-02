@@ -25,82 +25,64 @@ const SectionTemosDiferente = ({}) => {
           actionLabel="Como vender carros no finder"
           actionLink="/catalog"
           ariaLabel="Ir para página de ver ofertas"
-        >
-        </SectionHeader>
-		<div class="sectionAll">
-              <div class="containerCardAll">
-                  <div class="containerCard">
-                      <div class="infoCard">
-                          <div>
-                              <FeatureInfo
-                                  areaInfo="That’s more than you’ll find on any other major online automotive marketplace in the USA."
-                                  iconCard={iconFile}
-                              >
-                              </FeatureInfo>
+        ></SectionHeader>
+        <div className="sectionAll">
+          <div className="containerCardAll">
+            <div className="containerCard">
+              <div className="infoCard">
+                <div>
+                  <FeatureInfo
+                    areaInfo="Isso é mais do que você encontrará em qualquer outro grande mercado automotivo online no Brasil."
+                    iconCard={iconFile}
+                  ></FeatureInfo>
 
-                              <FeatureInfo
-                                  areaInfo="Our powerful search makes it easy to personalize your results so you only see the cars and features you care about."
-                                  iconCard={iconSearch}
-                              >
-                              </FeatureInfo>
+                  <FeatureInfo
+                    areaInfo="Nossa pesquisa avançada facilita a personalização de seus resultados para que você veja apenas os carros e os recursos que interessam a você."
+                    iconCard={iconSearch}
+                  ></FeatureInfo>
 
-                              <FeatureInfo
-                                  areaInfo="Our team is constantly developing new features that make the process of buying and selling a car simpler."
-                                  iconCard={iconSettings}
-                              >
-                              </FeatureInfo>
-
-                          </div>
-                      </div>
-                  </div>
-              </div>
-
-
-              <div class="containerCar">
-					<div class="imgCar">
-					
-                        <img src={ImgCar} alt="imagem do carro" />
-					</div>
-					<div class="imgLine">
-                        <img src={ImgLine} alt="Imagem de Linha pontilhadas" />
-					</div>
-				</div>
-
-
-
-                <div class="containerCardAllTwo">
-
-                      <div class="containerCard">
-                          <div>
-                              <div class="infoCardTwo">
-                              <FeatureInfoTwo
-                                  areaInfo="We provide free access to key info like dealer reviews, market value, price drops."
-                                  iconCard={iconInfo}
-                              >
-                              </FeatureInfoTwo>
-
-                              <FeatureInfoTwo
-                                  areaInfo="We focus on building the most transparent, trustworthy experience for our users, and we’ve proven that works for dealers, too."
-                                  iconCard={iconUser}
-                              >
-                              </FeatureInfoTwo>
-
-
-                              <FeatureInfoTwo
-                                  areaInfo="Specify the parameters of your car to form its market value on the basis of similar cars on Finder."
-                                  iconCard={iconCalculador}
-                              >
-                              </FeatureInfoTwo>
-                              </div>
-                         
-                          </div>
-                      </div>
-                  </div>
-
-
+                  <FeatureInfo
+                    areaInfo="Nossa equipe está constantemente desenvolvendo novos recursos que simplificam o processo de compra e venda de um carro."
+                    iconCard={iconSettings}
+                  ></FeatureInfo>
                 </div>
+              </div>
+            </div>
           </div>
 
+          <div className="containerCar">
+            <div className="imgCar">
+              <img src={ImgCar} alt="imagem do carro" />
+            </div>
+            <div className="imgLine">
+              <img src={ImgLine} alt="Imagem de Linha pontilhadas" />
+            </div>
+          </div>
+
+          <div className="containerCardAllTwo">
+            <div className="containerCard">
+              <div>
+                <div className="infoCardTwo">
+                  <FeatureInfoTwo
+                    areaInfo="Acesso gratuito a informações como avaliações de revendedores, valor de mercado, queda de preços."
+                    iconCard={iconInfo}
+                  ></FeatureInfoTwo>
+
+                  <FeatureInfoTwo
+                    areaInfo="Nos concentramos em criar a experiência mais transparente e confiável para os usuários e provamos que isso também funciona para os revendedores."
+                    iconCard={iconUser}
+                  ></FeatureInfoTwo>
+
+                  <FeatureInfoTwo
+                    areaInfo="Especifique os parâmetros do seu carro para formar seu valor de mercado com base em carros semelhantes no Finder."
+                    iconCard={iconCalculador}
+                  ></FeatureInfoTwo>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </S.SectionTemosDiferente>
   );
 };

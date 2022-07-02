@@ -24,23 +24,19 @@ const Footer = () => {
             <label htmlFor="languageSite">
               <img src={globeIcon} alt="" />
             </label>
-            <select name="languageSite" id="languageSite">
-              <option value="ptbr" selected>
-                pt-BR
-              </option>
-              <option value="enus">en-US</option>
+            <select name="languageSite" id="languageSite" onChange={() => {}}>
+              <option value="0">pt-BR</option>
+              <option value="1">en-US</option>
             </select>
 
             <label htmlFor="locationSite">
               <img src={pinIcon} alt="" />
             </label>
-            <select name="locationSite" id="locationSite">
-              <option value="Brasília">Brasiília</option>
-              <option value="Florianópolis">Florianópolis</option>
-              <option value="João Pessoa">João Pessoa</option>
-              <option value="São Paulo" selected>
-                São Paulo
-              </option>
+            <select name="locationSite" id="locationSite" onChange={() => {}}>
+              <option value="0">São Paulo</option>
+              <option value="1">Brasiília</option>
+              <option value="2">Florianópolis</option>
+              <option value="3">João Pessoa</option>
             </select>
           </fieldset>
         </div>

@@ -12,7 +12,7 @@ const Catalog = () => {
     <>
       <Navbar />
 
-      <div class="container">
+      <div className="container">
         <S.Catalog>
           <aside>
             <FiltersFormAdvanced />
