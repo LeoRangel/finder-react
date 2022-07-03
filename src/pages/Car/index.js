@@ -22,6 +22,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import IconButton from "@/components/IconButton";
 import GalleryCarroussel from "@/components/GalleryCarroussel";
 import SectionYouMightBeInterested from "@/components/SectionYouMightBeInterested";
+import { Link } from "react-router-dom";
 
 const Car = () => {
   return (
@@ -35,15 +36,15 @@ const Car = () => {
               <div>
                 <Breadcrumbs>
                   <li>
-                    <a href="index.html">Home</a>
+                    <Link to="index.html">Home</Link>
                   </li>
                   <li>
-                    <a href="#">Usados</a>
+                    <Link to="#">Usados</Link>
                   </li>
                   <li>
-                    <a href="#" disabled>
+                    <Link to="#" disabled>
                       Mercedes-Benz E 400 Cabriolet
-                    </a>
+                    </Link>
                   </li>
                 </Breadcrumbs>
               </div>
@@ -185,7 +186,7 @@ const Car = () => {
                   sit id pharetra vel ornare. Vestibulum sed tellus ullamcorper
                   arcu.
                 </p>
-                <a href="#">Ver mais</a>
+                <Link to="#">Ver mais</Link>
               </div>
 
               <hr />
@@ -220,7 +221,7 @@ const Car = () => {
                   </div>
                   <div>
                     <img src={locationIcon} alt="" />
-                    <a href="#">São Paulo</a>
+                    <Link to="#">São Paulo</Link>
                   </div>
                 </div>
               </div>
@@ -255,16 +256,16 @@ const Car = () => {
                   </div>
                 </div>
 
-                <a href="#">Outros anúncios deste vendedor</a>
+                <Link to="#">Outros anúncios deste vendedor</Link>
 
-                <a href="tel:+" className="myBtn btnOutlined">
+                <Link to="tel:+" className="myBtn btnOutlined">
                   <img src={phoneIcon} alt="" />
                   (11) *** ****
-                </a>
-                <a href="mailto:" className="myBtn">
+                </Link>
+                <Link to="mailto:" className="myBtn">
                   <img src={mailIcon} alt="" />
                   Enviar email
-                </a>
+                </Link>
               </div>
 
               <div className="subscribe">
