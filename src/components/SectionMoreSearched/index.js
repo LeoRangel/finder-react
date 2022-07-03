@@ -29,64 +29,64 @@ const SectionMoreSearched = ({}) => {
 
         <div>
           <div id="cardsCarTypes">
-            <div class="cardCarType">
+            <div className="cardCarType">
               <Link to="#" aria-label="Card clicável com um tipo de carro">
                 <img src={sedanImg} />
-                <h6 class="carTypeTitle">Sedan</h6>
+                <h6 className="carTypeTitle">Sedan</h6>
               </Link>
             </div>
-            <div class="cardCarType">
+            <div className="cardCarType">
               <Link to="#" aria-label="Card clicável com um tipo de carro">
                 <img src={suvImg} />
-                <h6 class="carTypeTitle">SUV</h6>
+                <h6 className="carTypeTitle">SUV</h6>
               </Link>
             </div>
-            <div class="cardCarType">
+            <div className="cardCarType">
               <Link to="#" aria-label="Card clicável com um tipo de carro">
                 <img src={wagonImg} />
-                <h6 class="carTypeTitle">Wagon</h6>
+                <h6 className="carTypeTitle">Wagon</h6>
               </Link>
             </div>
-            <div class="cardCarType">
+            <div className="cardCarType">
               <Link to="#" aria-label="Card clicável com um tipo de carro">
                 <img src={crossoverImg} />
-                <h6 class="carTypeTitle">Crossover</h6>
+                <h6 className="carTypeTitle">Crossover</h6>
               </Link>
             </div>
-            <div class="cardCarType">
+            <div className="cardCarType">
               <Link to="#" aria-label="Card clicável com um tipo de carro">
                 <img src={coupeImg} />
-                <h6 class="carTypeTitle">Coupe</h6>
+                <h6 className="carTypeTitle">Coupe</h6>
               </Link>
             </div>
-            <div class="cardCarType">
+            <div className="cardCarType">
               <Link to="#" aria-label="Card clicável com um tipo de carro">
                 <img src={pickupImg} />
-                <h6 class="carTypeTitle">Pickup</h6>
+                <h6 className="carTypeTitle">Pickup</h6>
               </Link>
             </div>
-            <div class="cardCarType">
+            <div className="cardCarType">
               <Link to="#" aria-label="Card clicável com um tipo de carro">
                 <img src={sportCoupeImg} />
-                <h6 class="carTypeTitle">Sport Coupe</h6>
+                <h6 className="carTypeTitle">Sport Coupe</h6>
               </Link>
             </div>
-            <div class="cardCarType">
+            <div className="cardCarType">
               <Link to="#" aria-label="Card clicável com um tipo de carro">
                 <img src={compactImg} />
-                <h6 class="carTypeTitle">Compact</h6>
+                <h6 className="carTypeTitle">Compact</h6>
               </Link>
             </div>
-            <div class="cardCarType">
+            <div className="cardCarType">
               <Link to="#" aria-label="Card clicável com um tipo de carro">
                 <img src={convertibleImg} />
-                <h6 class="carTypeTitle">Convertible</h6>
+                <h6 className="carTypeTitle">Convertible</h6>
               </Link>
             </div>
-            <div class="cardCarType">
+            <div className="cardCarType">
               <Link to="#" aria-label="Card clicável com um tipo de carro">
                 <img src={familyMpvImg} />
-                <h6 class="carTypeTitle">Family MPV</h6>
+                <h6 className="carTypeTitle">Family MPV</h6>
               </Link>
             </div>
           </div>

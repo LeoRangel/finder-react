@@ -23,20 +23,20 @@ const SectionBlog = ({}) => {
           ariaLabel="Ir para página de blog"
         />
 
-        <div class="center-content">
-          <article class="card-blog">
-            <img class="img-content" src={fuscaImg} alt="" />
-            <div class="link-blog1">
+        <div className="center-content">
+          <article className="card-blog">
+            <img className="img-content" src={fuscaImg} alt="" />
+            <div className="link-blog1">
               <a href="#">Dicas</a>
             </div>
-            <div class="link-blog2">
+            <div className="link-blog2">
               <a href="#">Loren Ipsuns</a>
             </div>
-            <div class="card-blog-perfil">
-              <img class="img-content-perfil" src={user1Img} alt="" />
+            <div className="card-blog-perfil">
+              <img className="img-content-perfil" src={user1Img} alt="" />
               <div>
                 <p>Jacob Jones</p>
-                <p class="card-date">
+                <p className="card-date">
                   <img src={calendarIcon} alt="" />
                   24 de Nov
                 </p>
@@ -44,19 +44,19 @@ const SectionBlog = ({}) => {
             </div>
           </article>
 
-          <article class="card-blog">
-            <img class="img-content" src={gtrImg} alt="" />
-            <div class="link-blog1">
+          <article className="card-blog">
+            <img className="img-content" src={gtrImg} alt="" />
+            <div className="link-blog1">
               <a href="#">Ofertas</a>
             </div>
-            <div class="link-blog2">
+            <div className="link-blog2">
               <a href="#">Loren Ipsuns</a>
             </div>
-            <div class="card-blog-perfil">
-              <img class="img-content-perfil" src={user2Img} alt="" />
+            <div className="card-blog-perfil">
+              <img className="img-content-perfil" src={user2Img} alt="" />
               <div>
                 <p>Annete Black</p>
-                <p class="card-date">
+                <p className="card-date">
                   <img src={calendarIcon} alt="" />
                   28 de Nov
                 </p>
@@ -64,19 +64,19 @@ const SectionBlog = ({}) => {
             </div>
           </article>
 
-          <article class="card-blog">
-            <img class="img-content" src={harleyImg} alt="" />
-            <div class="link-blog1">
+          <article className="card-blog">
+            <img className="img-content" src={harleyImg} alt="" />
+            <div className="link-blog1">
               <a href="#">Ofertas</a>
             </div>
-            <div class="link-blog2">
+            <div className="link-blog2">
               <a href="#">Loren Ipsuns</a>
             </div>
-            <div class="card-blog-perfil">
-              <img class="img-content-perfil" src={user3Img} alt="" />
+            <div className="card-blog-perfil">
+              <img className="img-content-perfil" src={user3Img} alt="" />
               <div>
                 <p>Ralph Edwards</p>
-                <p class="card-date">
+                <p className="card-date">
                   <img src={calendarIcon} alt="" />
                   15 de Dez
                 </p>

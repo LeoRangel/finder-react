@@ -93,7 +93,7 @@ const GalleryCarroussel = ({ gallery, video = "https://www.youtube.com/" }) => {
     playVideo.innerHTML = `
       <a
         href="${video}"
-        class="play-video"
+        className="play-video"
         target="_blank"
         rel="noopener noreferrer"
       >
