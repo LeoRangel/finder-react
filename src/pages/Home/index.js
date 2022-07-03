@@ -10,6 +10,7 @@ import Brands from "@/components/Brands";
 import SectionTemosDiferente from "@/components/SectionTemosDiferente";
 import SectionBaixeApp from "@/components/SectionBaixeApp";
 import SectionMoreSearched from "@/components/SectionMoreSearched";
+import SectionProductsCarousel from "@/components/SectionProductsCarousel";
 
 const Home = () => {
   return (
@@ -28,6 +29,8 @@ const Home = () => {
         <SectionTemosDiferente />
 
         <SectionLatestPublished />
+
+        <SectionProductsCarousel />
 
         <SectionBaixeApp />
 
