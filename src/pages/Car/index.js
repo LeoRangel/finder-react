@@ -8,8 +8,6 @@ import steeringWheelImg from "@/assets/img/car-banner/steering-wheel.png";
 import drivingTestImg from "@/assets/img/car-banner/driving-test.png";
 import accidentImg from "@/assets/img/car-banner/accident.png";
 
-import shareIcon from "@/assets/icons/share.svg";
-import heartIcon from "@/assets/icons/heart.svg";
 import mileageIcon from "@/assets/icons/mileage.svg";
 import locationIcon from "@/assets/icons/location.svg";
 import starIcon from "@/assets/icons/star.svg";
@@ -22,6 +20,8 @@ import Footer from "@/components/Footer";
 import SubscribeEmail from "@/components/SubscribeEmail";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import IconButton from "@/components/IconButton";
+import GalleryCarroussel from "@/components/GalleryCarroussel";
+import SectionYouMightBeInterested from "@/components/SectionYouMightBeInterested";
 
 const Car = () => {
   return (
@@ -117,6 +117,15 @@ const Car = () => {
             </section>
 
             <section className="singleItemPageContent">
+              <GalleryCarroussel
+                gallery={[
+                  "https://s3-alpha-sig.figma.com/img/97e5/2667/903fadc51cd3355f270d858f19660992?Expires=1657497600&Signature=FFfp4IpnRubeoQIKsxqRn1RzZzCJRuyEShaduwChjTgDCuVMklnbs6qJxnnt7syJrvjDgp6bpO7ONgLNg-V2VK0952MlMuqqvY2Vdas8KuNaWT8goJOqFvhe11Bgd3jApZT-jeRKhA9X1P2eL1rUUHx-n1zGst8xfhcnSYkxb4NfxLpzbcc~tH3-USFkEAQh5HgqylCKzLTt6hMeWzSmQaAu5M3GUVW3dk4d34MdYKY5xYnr4Un4FOKQWXvwchCDkn3rMiXp4VLy7W-5LGSZuoBb40WcarsWR~crkwwdW5q2oFzM2ylo264nS0P4YoFVVKUtCz5ZGoM8U4Yi3X-ReA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+                  "https://s3-alpha-sig.figma.com/img/cec2/d54c/c37ddb67c834286162bb519ca6017cd4?Expires=1657497600&Signature=KLmkS-BtS8f6gEZ6QpJ4kVEg94zC26dO8pX3n~RR9K8DUf3nOmbvAo-QimOCvoBZQVyrVEVnKpAbpQqD9WG2w1GYNZQvXDxckFpE~9F1yTDqPrF-RsVufcQCmXlKM~wKweQeFZDllUyRqsLHfl53sZCiB7IpYT6t5BAwdmYmAa7lPa237dUu-u2ymix4bzil-bJpIzgx00qRen46ocbPZO851swGb62xdL~GY-TKreuk5Bcnmn0MQmJS36mRrUWfXfGocrPAEbdOBRRcnvcgC2vgPAQE~eg8sDFGAPXFF6oORAZXWh5tZlfYnl4YD3h9TurbdiVWJEdWGyoOunvdpg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+                  "https://s3-alpha-sig.figma.com/img/0bd1/85ee/ea7e858680dab67f6f234fac6fa0f3bd?Expires=1657497600&Signature=ZA2KKqmMl7beMGnGfRwhS40kGzEhO5h7NtVSDxyvQ4KYOeJ8w2LZc5d2xe1-p71qJ6yf72h1cXXpAk1pyQXRrVZEZsMvjOrtB9jxrciDxDGWk~O88U5LO2BR75ihbnEnHvXQQrXRj3EivjuQ688wfoPapw-yk0Wu9sXJMYxLPjaT2jyR6YsN~PEbMMLlFWt7jDm5-5EsukH2RPZgjTGO9DRFEG2WIoQtMGtxyZ3imnqDIXKtd1d5vIlgRaABx0P-TbYIB3P5~vg9IUmbk4-2W4yW6Auiy5GuGR0VSohl~IvCbIwaHzKRu3NdJKdoP8xHIAs5ZqVJryOEawfRwgVHjA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+                  "https://s3-alpha-sig.figma.com/img/7365/a8dc/8322b69d69acf5f4f45c23bb0e2b0e39?Expires=1657497600&Signature=NSSRF6J29-xsKbHKqMlGaZsnIlDFbWeHf16W65o7IsA7GLuo4yesO6ZzB0rFVoFnjrjBhcaORb3CXdeFBp~T6Iv6fngTDt6pNhJJkuOoqGjEWeDdzUfT1AF3o4Yw6lyiw6j4IxzcboMJ4CdAK3JH-0HUZa9ldYTQfPoRDleLL2EuoPLzFNZRXZLdluOPHsh9JLqKjWtmRE3atALq6djRqE0T3qDwT7wiDvr2oZdi2xWQacnFHi0iIGfQaYpxb85ac-dmbKcjjWBj2QPwUQZFmUY809NVYtVSzeLZryqMZ7U~RWXZnLY8XohVRH034ISSWGDjY9QpsTlEY3Sx0qt9qA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+                ]}
+              />
+
               <div className="specifications">
                 <h2>Especificações</h2>
 
@@ -246,13 +255,13 @@ const Car = () => {
                   </div>
                 </div>
 
-                <a href="#">Other ads by this seller</a>
+                <a href="#">Outros anúncios deste vendedor</a>
 
                 <a href="tel:+" className="myBtn btnOutlined">
                   <img src={phoneIcon} alt="" />
                   (11) *** ****
                 </a>
-                <a href="#" className="myBtn">
+                <a href="mailto:" className="myBtn">
                   <img src={mailIcon} alt="" />
                   Enviar email
                 </a>
@@ -289,6 +298,8 @@ const Car = () => {
             </section>
           </main>
         </div>
+
+        <SectionYouMightBeInterested />
       </S.Car>
 
       <Footer />

@@ -7,28 +7,13 @@ export const Car = styled.div`
   gap: 5rem;
   padding: 5rem 0;
 
-  section {
-    margin-bottom: 0;
-  }
-
-  /* :is(h1, h2, h3) {
-    font-weight: 700;
-    line-height: 130%;
-  }
-
-  h1 {
-    font-size: 4rem;
-  }
-
   h2 {
-    font-size: 2.4rem;
     margin-bottom: 2rem;
   }
 
-  h3 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  } */
+  section {
+    margin-bottom: 0;
+  }
 
   main {
     width: 100%;
@@ -42,21 +27,23 @@ export const Car = styled.div`
   }
 
   .singleItemPageContent {
-    flex: 1;
+    width: 100%;
   }
 
   .singleItemPageSidebar {
     width: 100%;
-    max-width: 450px;
+    flex: 1;
+  }
+
+  @media (min-width: 992px) {
+    .singleItemPageContent {
+      max-width: 56%;
+    }
   }
 
   @media (max-width: 992px) {
     main {
       flex-direction: column;
-    }
-
-    .singleItemPageSidebar {
-      max-width: unset;
     }
   }
 
@@ -249,6 +236,7 @@ export const Car = styled.div`
 
     .acceptAlert label {
       gap: 1rem;
+      align-items: baseline;
     }
 
     small {
