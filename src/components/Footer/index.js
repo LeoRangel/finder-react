@@ -16,7 +16,7 @@ const Footer = () => {
     <S.FooterContent>
       <div className="link-content-head">
         <div className="container">
-          <Link to="#">
+          <Link to="/">
             <img src={logoSite} alt="Logo do site" />
           </Link>
 
@@ -57,41 +57,41 @@ const Footer = () => {
           <div className="footer-links-mid">
             <h3>Comprar ou Vender</h3>
 
-            <a href="#">Encontre um carro</a>
-            <a href="#">Venda seu carro</a>
-            <a href="#">Revendedores de carros</a>
-            <a href="#">Comparar carros</a>
-            <a href="#">Avaliação de carros online</a>
+            <Link to={"/catalog"}>Encontre um carro</Link>
+            <Link to={"#"}>Venda seu carro</Link>
+            <Link to={"#"}>Revendedores de carros</Link>
+            <Link to={"#"}>Comparar carros</Link>
+            <Link to={"#"}>Avaliação de carros online</Link>
           </div>
 
           <div className="footer-links-mid">
             <h3>Sobre</h3>
 
-            <a href="#">Sobre o Finder</a>
-            <a href="#">Contate-nos</a>
-            <a href="#">FAQs & suporte</a>
-            <a href="#">App Mobile</a>
-            <a href="#">Blog</a>
+            <Link to={"#"}>Sobre o Finder</Link>
+            <Link to={"#"}>Contate-nos</Link>
+            <Link to={"#"}>FAQs & suporte</Link>
+            <Link to={"#"}>App Mobile</Link>
+            <Link to={"#"}>Blog</Link>
           </div>
 
           <div className="footer-links-mid">
             <h3>Perfil</h3>
 
-            <a href="#">Minha conta</a>
-            <a href="#">Lista de desejos</a>
-            <a href="#">Minhas listagens</a>
-            <a href="#">Add listagem</a>
+            <Link to={"#"}>Minha conta</Link>
+            <Link to={"#"}>Lista de desejos</Link>
+            <Link to={"#"}>Minhas listagens</Link>
+            <Link to={"#"}>Add listagem</Link>
           </div>
 
           <address className="footer-links-adress">
-            <a href="tel:+1111111111">
+            <Link to="tel:+1111111111">
               <img src={cellphoneIcon} alt="" />
               (11) 1111-1111
-            </a>
-            <a href="mailto:email@finder.com.br">
+            </Link>
+            <Link to="mailto:email@finder.com.br">
               <img src={mail2Icon} alt="" />
               email@finder.com.br
-            </a>
+            </Link>
 
             <div className="social-btns">
               <IconButton>
@@ -166,8 +166,8 @@ const Footer = () => {
           </p>
 
           <div className="terms-and-politic">
-            <a href="#">Termos de uso</a>
-            <a href="#">Política de privacidade</a>
+            <Link to={"#"}>Termos de uso</Link>
+            <Link to={"#"}>Política de privacidade</Link>
           </div>
         </div>
       </div>

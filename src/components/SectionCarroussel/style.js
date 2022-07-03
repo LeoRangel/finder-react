@@ -5,8 +5,10 @@ export const SectionCarroussel = styled.div`
     position: relative;
     width: 100%;
 
-    article {
-      margin: 0 1rem;
+    @media (min-width: 768px) {
+      article {
+        margin: 0 1rem;
+      }
     }
 
     .slick-arrow {

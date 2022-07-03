@@ -13,17 +13,27 @@ const Navbar = () => {
     <S.NavContent>
       <div className="container">
         <div className="navMenu">
-          <Link to="#">
+          <Link to="/">
             <img src={logoSite} alt="Logo do site" />
           </Link>
 
           <S.UlItem className="hidden-when-lg">
             <li>|</li>
-            <li>Novos</li>
-            <li>Usados</li>
-            <li>Vender</li>
-            <li>Comprar</li>
-            <li>Novidades e reviews</li>
+            <li>
+              <Link to={"/catalog?condicion=Novo"}>Novos</Link>
+            </li>
+            <li>
+              <Link to={"/catalog?condicion=Usado"}>Usados</Link>
+            </li>
+            <li>
+              <Link to={"#"}>Vender</Link>
+            </li>
+            <li>
+              <Link to={"/catalog"}>Comprar</Link>
+            </li>
+            <li>
+              <Link to={"#"}>Novidades e reviews</Link>
+            </li>
           </S.UlItem>
         </div>
 

@@ -64,14 +64,14 @@ const CarCard = ({
         <div className="carCardSlider">
           <div className="mySlideList" id={`car${id}`}>
             {images?.map((item, index) => (
-              <a
-                href={`/car/?car_id=${id}`}
+              <Link
+                to={`/car/?car_id=${id}`}
                 className={`mySlide ${index === 0 && "active"}`}
                 data-slide-index={index + 1}
                 key={index}
               >
                 <img src={item} alt="" loading="lazy" />
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -135,7 +135,7 @@ const CarCard = ({
             </div>
 
             <h3 className="carName">
-              <Link to={link}>{name}</Link>
+              <Link to={`/car/?car_id=${id}`}>{name}</Link>
             </h3>
 
             <p className="carPrice">
@@ -187,7 +187,7 @@ const CarCard = ({
             </div>
 
             <h3 className="carName">
-              <Link to={link}>{name}</Link>
+              <Link to={`/car/?car_id=${id}`}>{name}</Link>
             </h3>
 
             <p className="carPrice">

@@ -11,6 +11,7 @@ import carIcon from "@/assets/icons/car.svg";
 import RadioBtnsGroup from "@/components/RadioBtnsGroup";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CarCard from "@/components/CarCard";
+import { Link } from "react-router-dom";
 
 const SectionFilteredCars = ({}) => {
   return (
@@ -19,12 +20,12 @@ const SectionFilteredCars = ({}) => {
         <div>
           <Breadcrumbs>
             <li>
-              <a href="index.html">Home</a>
+              <Link to="index.html">Home</Link>
             </li>
             <li>
-              <a href="#" disabled>
+              <Link to="#" disabled>
                 Carros usados
-              </a>
+              </Link>
             </li>
           </Breadcrumbs>
         </div>
