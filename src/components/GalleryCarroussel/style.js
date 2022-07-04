@@ -22,7 +22,7 @@ export const GalleryCarroussel = styled.div`
       overflow: hidden;
       border-radius: 0.8rem;
       padding: 0;
-      background-color: rgba(255, 255, 255, 0.04);
+      background-color: black;
 
       div {
         width: 100%;
