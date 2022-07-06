@@ -6,7 +6,7 @@ import { hotjar } from 'react-hotjar';
 import GlobalStyle from './globalStyle';
 
  //Hotjar configs
- hotjar.initialize(hjid, hjsv);
+ hotjar.initialize('3053486');
  hotjar.identify('3053486', {
   userProperty:'value'
  });
