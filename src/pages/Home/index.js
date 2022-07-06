@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+
+import useApp from "@/hooks/useApp";
 
 import Footer from "@/components/Footer";
 // import SectionExemplo from "@/components/SectionExemplo";
@@ -14,6 +16,8 @@ import SectionProductsCarousel from "@/components/SectionProductsCarousel";
 import SectionBlog from "@/components/SectionBlog";
 
 const Home = () => {
+  // const { brandsList, colorsList } = useApp();
+
   return (
     <>
       <MainHeader />
@@ -25,7 +29,7 @@ const Home = () => {
 
         <SectionOfertas />
 
-        <Brands />
+        <Brands /* brandsList={brandsList} */ />
 
         <SectionTemosDiferente />
 

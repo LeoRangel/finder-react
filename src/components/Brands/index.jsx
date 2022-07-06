@@ -15,11 +15,24 @@ import Infiniti from '@/assets/icons/infiniti.svg';
 import Mitsubishi from '@/assets/icons/mitsubishi.svg';
 import Hyundai from '@/assets/icons/hyundai.svg';
 
-const Brands = () => {
+const Brands = ({brandsList=[]}) => {
+
 	return(
 		<S.Brands>
 			<div className="container">
 				<div id="brandsLogo">
+
+          {/* {brandsList?.map((item) => {
+            return (
+              <img
+                key={item.id}
+                src={item.logo}
+                alt={item.name}
+                title={item.name}
+              />
+            );
+          })} */}
+
 					<img src={Opel} alt="Opel" title="Opel"/>
 					<img src={Audi} alt="Audi" title="Audi"/>
 					<img src={Mercedes} alt="Mercedes" title="Mercedes"/>

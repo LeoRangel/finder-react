@@ -1,5 +1,5 @@
-import axios from 'axios';
+import axios from "axios";
 
 export const api = axios.create({
-  baseURL: 'https://e-carros-api.herokuapp.com/'
+  baseURL: "https://monkfish-app-2xvm7.ondigitalocean.app/",
 });
