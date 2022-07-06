@@ -14,7 +14,7 @@ const SectionYouMightBeInterested = ({}) => {
           <SectionHeader
             title="Você pode estar interessado"
             actionLabel="Ver todas"
-            actionLink="/catalog"
+            actionLink="/loading"
             ariaLabel="Ir para página de ver todas as ofertas"
           />
 
