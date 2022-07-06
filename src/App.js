@@ -1,7 +1,7 @@
 import React from 'react';
 import Routes from './routes';
 import { hotjar } from 'react-hotjar';
-// import TagMananger from 'react-gtm-module';
+import TagMananger from 'react-gtm-module';
 
 import GlobalStyle from './globalStyle';
 
@@ -13,11 +13,11 @@ import GlobalStyle from './globalStyle';
  hotjar.event('button-click');
  hotjar.stateChange('/');
 
-// Google TAG Manager
-// const tagManagerArgs = {
-//   gtmId: process.env.TAG_MANAGER_GTM_ID
-// }
-// TagMananger.initialize(tagManagerArgs);
+//Google TAG Manager
+const tagManagerArgs = {
+  gtmId: 'GTM-563W3XZ'
+}
+TagMananger.initialize(tagManagerArgs);
 
 const App = () => {
   return(
