@@ -12,7 +12,7 @@ const SectionOfertas = ({}) => {
         <SectionHeader
           title="Ofertas"
           actionLabel="Ver todas as ofertas"
-          actionLink="/catalog"
+          actionLink="/loading"
           ariaLabel="Ir para página de ver todos as ofertas"
         />
 

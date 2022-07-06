@@ -5,6 +5,7 @@ import Err from "@/pages/Erro";
 import Home from "@/pages/Home";
 import Catalog from "@/pages/Catalog";
 import Car from "@/pages/Car";
+import Loading from "@/pages/loading";
 
 const Router = () => {
   return (
@@ -14,6 +15,7 @@ const Router = () => {
         <Route path="/" element={<Home />} />
         <Route path="/catalog" element={<Catalog />} />
         <Route path="/car" element={<Car />} />
+        <Route path="/loading" element={<Loading />} />
       </Routes>
     </BrowserRouter>
   );

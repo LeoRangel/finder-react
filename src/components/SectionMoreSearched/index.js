@@ -23,7 +23,7 @@ const SectionMoreSearched = ({}) => {
         <SectionHeader
           title="Mais procurados"
           actionLabel="Ver todos"
-          actionLink="/catalog"
+          actionLink="/loading"
           ariaLabel="Ir para página de ver todas as ofertas"
         />
 

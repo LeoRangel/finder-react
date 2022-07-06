@@ -14,7 +14,7 @@ const SectionLatestPublished = ({}) => {
         <SectionHeader
           title="Últimos publicados"
           actionLabel="Ver todos"
-          actionLink="/catalog"
+          actionLink="/loading"
           ariaLabel="Ir para página de ver ofertas"
         >
           <RadioBtnsGroup>
