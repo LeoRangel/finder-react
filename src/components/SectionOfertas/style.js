@@ -4,7 +4,7 @@ export const SectionOfertas = styled.section`
   .ofertasCarGrid {
     width: 100%;
     display: grid;
-    gap: 20px;
+    gap: 2rem;
     grid-template: "card1 card2" auto "card1 card3" auto / 1fr 1fr;
   }
 

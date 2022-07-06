@@ -3,8 +3,6 @@ import styled from "styled-components";
 export const NavContent = styled.nav`
   color: white;
   padding: 2rem 0;
-  margin-bottom: 7.2rem;
-   
 
   .container {
     width: 100%;
@@ -31,8 +29,10 @@ export const UlItem = styled.ul`
 		margin: 0 25px 0 0;
 		cursor: pointer;
 		&:nth-child(1) {
+			opacity: 0.15;
 			margin-right: 3rem;
 			margin-left: 5.8rem;
+			cursor: default;
 		}
 	}
 `
