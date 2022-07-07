@@ -19,7 +19,7 @@ const Brands = () => {
 	return(
 		<S.Brands>
 			<div className="container">
-				<span id="brandsLogo">
+				<div id="brandsLogo">
 					<img src={Opel} alt="Opel" title="Opel"/>
 					<img src={Audi} alt="Audi" title="Audi"/>
 					<img src={Mercedes} alt="Mercedes" title="Mercedes"/>
@@ -32,7 +32,7 @@ const Brands = () => {
 					<img src={Renault} alt="Renault" title="Renault"/>
 					<img src={Infiniti} alt="Infiniti" title="Infiniti"/>
 					<img src={Mitsubishi} alt="Mitsubishi" title="Mitsubishi"/>
-				</span>
+				</div>
 		</div>
 		</S.Brands>
 

@@ -2,13 +2,10 @@ import React from "react";
 
 import * as S from "./style";
 
-const FeatureInfoTwo = ({
-  areaInfo = "",
-  iconCard = "",
-}) => {
+const FeatureInfoTwo = ({ areaInfo = "", iconCard = "" }) => {
   return (
     <S.ContainerSection>
-      <div class="iconeCard">
+      <div className="iconeCard">
         <img src={iconCard} alt="" />
       </div>
       <div>

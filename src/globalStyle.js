@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import chevronDownIcon from "@/assets/icons/chevron-down.svg";
 
 const GlobalStyle = createGlobalStyle`
   :root {
@@ -53,6 +54,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     color: var(--white);
     background: var(--gray-900);
+    overflow-x: hidden;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -70,7 +72,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h3 {
-    font-size: 2.4rem;
+    font-size: 2rem;
   }
 
   a {
@@ -101,9 +103,9 @@ const GlobalStyle = createGlobalStyle`
   .container {
     display: flex;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1300px;
     margin: auto;
-    padding: 0 1rem;
+    padding: 0 1.6rem;
   }
 
   section .container {
@@ -243,7 +245,7 @@ const GlobalStyle = createGlobalStyle`
     -moz-appearance: none;
     -ms-appearance: none;
     background-position: calc(100% - 1.2rem) center !important;
-    background: rgba(255, 255, 255, 0.04) url("../img/icons/chevron-down.svg")
+    background: rgba(255, 255, 255, 0.04) url(${chevronDownIcon})
       no-repeat;
     padding-right: 3rem;
 
