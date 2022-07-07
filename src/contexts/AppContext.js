@@ -5,22 +5,29 @@ export const AppContext = createContext({});
 
 export function AppContextProvider({ children }) {
   const [brandsList, setBrandsList] = useState([]);
-
-  useEffect(() => {
-    getBrands();
-  }, []);
+  const [cartypeList, setCartypeList] = useState([]);
 
   async function getBrands() {
     const { data } = await api.get("brands");
-    console.log(data);
     setBrandsList(data);
   }
+
+  async function getCartype() {
+    const { data } = await api.get("cartype");
+    setCartypeList(data);
+  }
+
+  useEffect(() => {
+    getBrands();
+    getCartype();
+  }, []);
 
   const value = useMemo(
     () => ({
       brandsList,
+      cartypeList,
     }),
-    [brandsList]
+    [brandsList, cartypeList]
   );
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;

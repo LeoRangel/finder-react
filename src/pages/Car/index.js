@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import * as S from "./style";
+
+import { api } from "@/services/api";
+import useApp from "@/hooks/useApp";
 
 import avatarImg from "@/assets/img/avatar.jpeg";
 import checkImg from "@/assets/img/car-banner/check.png";
@@ -25,6 +28,37 @@ import SectionYouMightBeInterested from "@/components/SectionYouMightBeIntereste
 import { Link } from "react-router-dom";
 
 const Car = () => {
+  const [car, setCar] = useState({});
+  const [photos, setPhotos] = useState("");
+
+  useEffect(() => {
+    getCar();
+  }, []);
+
+  const getCar = async () => {
+    // Get url search params
+    var current_url = new URL(location.href);
+    var search_params = current_url.searchParams;
+    var car_id = search_params.get("car_id");
+
+    const { data } = await api.get(`adverts?id=${car_id}`);
+    setCar(data.results[0]);
+    setPhotos(data.results[0].photos.value);
+  };
+
+  function formatDate(date) {
+    let data = new Date(date);
+    let dataFormatada =
+      data.getDate() +
+      1 +
+      "/" +
+      (data.getMonth() + 1) +
+      "/" +
+      data.getFullYear();
+    return dataFormatada;
+    // saída: 2020-1-29
+  }
+
   return (
     <>
       <Navbar />
@@ -43,14 +77,15 @@ const Car = () => {
                   </li>
                   <li>
                     <Link to="#" disabled>
-                      Mercedes-Benz E 400 Cabriolet
+                      {car?.model ?? "Não encontrado"}
                     </Link>
                   </li>
                 </Breadcrumbs>
               </div>
 
               <div>
-                <h1>Mercedes-Benz E 400 Cabriolet</h1>
+                <h1>{car?.model ?? "Não encontrado"}</h1>
+                {/* <h1>Mercedes-Benz E 400 Cabriolet</h1> */}
 
                 <ul className="singleItemOptions">
                   <li>
@@ -118,23 +153,30 @@ const Car = () => {
             </section>
 
             <section className="singleItemPageContent">
-              <GalleryCarroussel
+              {photos && (
+                <GalleryCarroussel
+                  gallery={[`${photos}`, `${photos}`, `${photos}`, `${photos}`]}
+                />
+              )}
+
+              {/* <GalleryCarroussel
                 gallery={[
                   "https://s3-alpha-sig.figma.com/img/97e5/2667/903fadc51cd3355f270d858f19660992?Expires=1657497600&Signature=FFfp4IpnRubeoQIKsxqRn1RzZzCJRuyEShaduwChjTgDCuVMklnbs6qJxnnt7syJrvjDgp6bpO7ONgLNg-V2VK0952MlMuqqvY2Vdas8KuNaWT8goJOqFvhe11Bgd3jApZT-jeRKhA9X1P2eL1rUUHx-n1zGst8xfhcnSYkxb4NfxLpzbcc~tH3-USFkEAQh5HgqylCKzLTt6hMeWzSmQaAu5M3GUVW3dk4d34MdYKY5xYnr4Un4FOKQWXvwchCDkn3rMiXp4VLy7W-5LGSZuoBb40WcarsWR~crkwwdW5q2oFzM2ylo264nS0P4YoFVVKUtCz5ZGoM8U4Yi3X-ReA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
                   "https://s3-alpha-sig.figma.com/img/cec2/d54c/c37ddb67c834286162bb519ca6017cd4?Expires=1657497600&Signature=KLmkS-BtS8f6gEZ6QpJ4kVEg94zC26dO8pX3n~RR9K8DUf3nOmbvAo-QimOCvoBZQVyrVEVnKpAbpQqD9WG2w1GYNZQvXDxckFpE~9F1yTDqPrF-RsVufcQCmXlKM~wKweQeFZDllUyRqsLHfl53sZCiB7IpYT6t5BAwdmYmAa7lPa237dUu-u2ymix4bzil-bJpIzgx00qRen46ocbPZO851swGb62xdL~GY-TKreuk5Bcnmn0MQmJS36mRrUWfXfGocrPAEbdOBRRcnvcgC2vgPAQE~eg8sDFGAPXFF6oORAZXWh5tZlfYnl4YD3h9TurbdiVWJEdWGyoOunvdpg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
                   "https://s3-alpha-sig.figma.com/img/0bd1/85ee/ea7e858680dab67f6f234fac6fa0f3bd?Expires=1657497600&Signature=ZA2KKqmMl7beMGnGfRwhS40kGzEhO5h7NtVSDxyvQ4KYOeJ8w2LZc5d2xe1-p71qJ6yf72h1cXXpAk1pyQXRrVZEZsMvjOrtB9jxrciDxDGWk~O88U5LO2BR75ihbnEnHvXQQrXRj3EivjuQ688wfoPapw-yk0Wu9sXJMYxLPjaT2jyR6YsN~PEbMMLlFWt7jDm5-5EsukH2RPZgjTGO9DRFEG2WIoQtMGtxyZ3imnqDIXKtd1d5vIlgRaABx0P-TbYIB3P5~vg9IUmbk4-2W4yW6Auiy5GuGR0VSohl~IvCbIwaHzKRu3NdJKdoP8xHIAs5ZqVJryOEawfRwgVHjA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
                   "https://s3-alpha-sig.figma.com/img/7365/a8dc/8322b69d69acf5f4f45c23bb0e2b0e39?Expires=1657497600&Signature=NSSRF6J29-xsKbHKqMlGaZsnIlDFbWeHf16W65o7IsA7GLuo4yesO6ZzB0rFVoFnjrjBhcaORb3CXdeFBp~T6Iv6fngTDt6pNhJJkuOoqGjEWeDdzUfT1AF3o4Yw6lyiw6j4IxzcboMJ4CdAK3JH-0HUZa9ldYTQfPoRDleLL2EuoPLzFNZRXZLdluOPHsh9JLqKjWtmRE3atALq6djRqE0T3qDwT7wiDvr2oZdi2xWQacnFHi0iIGfQaYpxb85ac-dmbKcjjWBj2QPwUQZFmUY809NVYtVSzeLZryqMZ7U~RWXZnLY8XohVRH034ISSWGDjY9QpsTlEY3Sx0qt9qA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
                 ]}
-              />
+              /> */}
 
               <div className="specifications">
                 <h2>Especificações</h2>
 
                 <p>
-                  <strong>Ano:</strong> 2018
+                  <strong>Ano:</strong> {car?.year ?? "Não encontrado"}
                 </p>
                 <p>
-                  <strong>Quilometragem:</strong> 25K miles
+                  <strong>Quilometragem:</strong>
+                  {car?.kilometers ?? "Não encontrado"}
                 </p>
                 <p>
                   <strong>Tipo:</strong> Convertible
@@ -177,15 +219,7 @@ const Car = () => {
               <div className="specifications">
                 <h2>Descrição do vendedor</h2>
 
-                <p>
-                  Lorem tincidunt lectus vitae id vulputate diam quam. Imperdiet
-                  non scelerisque turpis sed etiam ultrices. Blandit mollis
-                  dignissim egestas consectetur porttitor. Vulputate dolor
-                  pretium, dignissim eu augue sit ut convallis. Lectus est,
-                  magna urna feugiat sed ultricies sed in lacinia. Fusce potenti
-                  sit id pharetra vel ornare. Vestibulum sed tellus ullamcorper
-                  arcu.
-                </p>
+                <p>{car?.description ?? "Não encontrado"}</p>
                 <Link to="#">Ver mais</Link>
               </div>
 
@@ -194,7 +228,7 @@ const Car = () => {
               <div className="infosList">
                 <div>
                   <span>
-                    Publicado: Abril, <strong>2020</strong>
+                    Publicado: {formatDate(car?.createdAt) ?? "Não encontrado"}
                   </span>
                 </div>
                 <div>
@@ -212,12 +246,17 @@ const Car = () => {
 
             <section className="singleItemPageSidebar">
               <div>
-                <h2>R$ 60.990</h2>
+                <h2>
+                  {car?.price?.toLocaleString("pt-BR", {
+                    style: "currency",
+                    currency: "BRL",
+                  }) ?? "Não encontrado"}
+                </h2>
 
                 <div className="infosList">
                   <div>
                     <img src={mileageIcon} alt="" />
-                    <span>25.000 Km</span>
+                    <span>{car?.kilometers ?? "Não encontrado"}</span>
                   </div>
                   <div>
                     <img src={locationIcon} alt="" />
